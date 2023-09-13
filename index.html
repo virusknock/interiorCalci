@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Royal Interior</title>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://kit.fontawesome.com/ca9bd4dabb.js" crossorigin="anonymous"></script>
+    <link href="main.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body class="fixed-navbar fixed-layout">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="iboxAll">
+      <h3 class="text-center mt-2 text-primary">Royal Interior</h3>
+    </div>
+    </div>
+  </div>
+        <div class="row m-4 costomContainer">
+                <div class="col-md-12" id="inputSelect">
+                    <div class="d-flex justify-content-around">
+                      <select class="search" style="width:40%" id="itemRi" onchange="itemRi()" title="Select Market">
+
+                        <option value=""> Select Item </option>
+                        <option value="Kitchen"> Kitchen </option>
+                        <option value="Tv Unit"> TV Unit </option>
+                        <option value="Ward roof1"> Ward Roof 1 </option>
+                        <option value="Ward roof2"> Ward Roof 2 </option>
+
+                      </select>
+                      <div class="form-outline" style="width:40%">
+                        <input type="text" id="clientNm" onkeyup="clientNm()" class="form-control" />
+                        <label class="form-label" for="form3Example1">Client Name</label>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-around">
+
+                      <div class="form-outline" style="width:40%">
+                        <input type="number" id="heightRi" onkeyup="heightRi()" class="form-control" />
+                        <label class="form-label" for="form3Example1">Height</label>
+                      </div>
+                      <div class="form-outline" style="width:40%">
+                        <input type="number" id="widthRi" onkeyup="widthRi()" class="form-control" />
+                        <label class="form-label" for="form3Example1">Width</label>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-around">
+
+                      <div class="form-outline" style="width:40%">
+                        <input type="number" id="depthRi" onkeyup="depthRi()" class="form-control" />
+                        <label class="form-label" for="form3Example1">Depth</label>
+                      </div>
+                      <div class="form-outline" style="width:40%">
+                        <input type="number" id="priceRi" onkeyup="priceRi()" class="form-control" />
+                        <label class="form-label" for="form3Example1">Price</label>
+                      </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12" id="total">
+                  <div bgcolor="#f6f6f6" style="color: #333; height: 100%; width: 100%;" height="100%" width="100%">
+                     <table bgcolor="#f6f6f6" cellspacing="0" style="border-collapse: collapse; padding: 40px; width: 100%;" width="100%">
+                        <tbody>
+                           <tr>
+                              <td width="5px" style="padding: 0;"></td>
+                              <td style="clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 10px 0;">
+                                 <table width="100%" cellspacing="0" style="border-collapse: collapse;">
+                                    <tbody>
+                                       <tr>
+                                          <td style="padding: 0;">
+                                             <a href="https://virusknock.github.io/interiorCalci/" style="color: #348eda;" target="_blank">
+                                             <h2>Royal Interior</h2>
+                                             </a>
+                                          </td>
+                                          <td style="color: #999; font-size: 12px; padding: 0; text-align: right;" align="right">
+                                             Invoice to <b><span id="itemName">Select</span></b><br/>
+                                             Invoice #<span id="invoiceno">123</span><br/>
+                                             <span id="now"></span>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td width="5px" style="padding: 0;"></td>
+                           </tr>
+                           <tr>
+                              <td width="5px" style="padding: 0;"></td>
+                              <td bgcolor="#FFFFFF" style="border: 1px solid #000; clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 0;">
+                                 <table width="100%" style="background: #f9f9f9; border-bottom: 1px solid #eee; border-collapse: collapse; color: #999;">
+                                    <tbody>
+                                       <tr>
+                                          <td width="50%" style="padding: 20px;"><strong style="color: #333; font-size: 24px;" id="clientName">I Awesome</strong> </td>
+                                          <td align="right" width="50%" style="padding: 20px;">22/8-13a,ttd plots,vaikuntapuram road
+                                tirupati-517502
+                                royalinterior@gmail.com
+                                9989988020 </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td style="padding: 0;"></td>
+                              <td width="5px" style="padding: 0;"></td>
+                           </tr>
+                           <tr>
+                              <td width="5px" style="padding: 0;"></td>
+                              <td style="border: 1px solid #000; border-top: 0; clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 0;">
+                                 <table cellspacing="0" style="border-collapse: collapse; border-left: 1px solid #000; margin: 0 auto; max-width: 600px;">
+                                    <tbody>
+                                       <tr>
+                                          <td valign="top" style="padding: 20px;">
+                                             <h3 style="
+                                                border-bottom: 1px solid #000;
+                                                color: #000;
+                                                font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+                                                font-size: 18px;
+                                                font-weight: bold;
+                                                line-height: 1.2;
+                                                margin: 0;
+                                                margin-bottom: 15px;
+                                                padding-bottom: 5px;
+                                                ">
+                                                Summary
+                                             </h3>
+                                             <table cellspacing="0" style="border-collapse: collapse; margin-bottom: 40px;">
+                                                <tbody>
+                                                   <tr>
+                                                      <td style="padding: 5px 0;">Height</td>
+                                                      <td align="right" style="padding: 5px 0;" id="height">200.0</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td style="padding: 5px 0;">Width</td>
+                                                      <td align="right" style="padding: 5px 0;" id="width">100.0</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td style="padding: 5px 0;">Depth</td>
+                                                      <td align="right" style="padding: 5px 0;" id="depth">200.0</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td style="padding: 5px 0;">Price</td>
+                                                      <td align="right" style="padding: 5px 0;" id="price">300.0</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td style="border-bottom: 2px solid #000; border-top: 2px solid #000; font-weight: bold; padding: 5px 0;">Total</td>
+                                                      <td align="right" style="border-bottom: 2px solid #000; border-top: 2px solid #000; font-weight: bold; padding: 5px 0;"><u id="result">800</u></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td style="border-bottom: 2px solid #000; border-top: 2px solid #000; font-weight: bold; padding: 5px 0;">In Words: &nbsp;</td>
+                                                      <td align="right" style="color:green;border-bottom: 2px solid #000; border-top: 2px solid #000; font-weight: bold; padding: 5px 0;" id="numtoword"> Eight Hundred only</td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td width="5px" style="padding: 0;"></td>
+                           </tr>
+                           <tr style="color: #666; font-size: 12px;">
+                              <td width="5px" style="padding: 10px 0;"></td>
+                              <td style="clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 10px 0;">
+                                 <table width="100%" cellspacing="0" style="border-collapse: collapse;">
+                                    <tbody>
+                                       <tr>
+                                          <td width="40%" valign="top" style="padding: 10px 0;">
+
+                                          </td>
+                                          <td width="10%" style="padding: 10px 0;">&nbsp;</td>
+                                          <td align="right" width="40%" valign="top" style="padding: 10px 0;">
+                                             <p style="color: #666; font-size: 12px; font-weight: normal; margin-bottom: 10px;">
+                                                Authorized Signatory
+                                             </p>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td width="5px" style="padding: 10px 0;"></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <button type="button" id="button" onclick="printed()" name="button">Hide Form for Print</button>
+                  </div>
+                </div>
+
+        </div>
+  <script>
+      $(document).ready(function() {
+        $('.search').select2();
+      });
+  </script>
+  <script type="text/javascript">
+
+
+      function itemRi(){
+        let item = document.getElementById("itemRi").value;
+        document.getElementById("itemName").innerHTML = item;
+      }
+      function clientNm(){
+        let client = document.getElementById("clientNm").value;
+        document.getElementById("clientName").innerHTML = client;
+      }
+      function heightRi(){
+        let height = Number(document.getElementById("heightRi").value);
+        document.getElementById("height").innerHTML = height;
+        totalResult();
+      }
+      function widthRi(){
+        let width = Number(document.getElementById("widthRi").value);
+        document.getElementById("width").innerHTML = width;
+        totalResult();
+      }
+      function depthRi(){
+        let depth = Number(document.getElementById("depthRi").value);
+        document.getElementById("depth").innerHTML = depth;
+        totalResult();
+      }
+      function priceRi(){
+        let price = Number(document.getElementById("priceRi").value);
+        document.getElementById("price").innerHTML = price;
+        totalResult();
+      }
+
+      function totalResult(){
+        let height = Number(document.getElementById("heightRi").value);
+        let width = Number(document.getElementById("widthRi").value);
+        let depth = Number(document.getElementById("depthRi").value);
+        let price = Number(document.getElementById("priceRi").value);
+
+        let heightNotZero = height==0?1:height;
+        let widthNotZero = width==0?1:width;
+        let depthNotZero = depth==0?1:depth;
+        let priceNotZero = price==0?1:price;
+        result = heightNotZero * widthNotZero * depthNotZero * priceNotZero;
+        document.getElementById("result").innerHTML = result;
+        document.getElementById('numtoword').innerHTML = numberToWords(result);
+        document.getElementById("invoiceno").innerHTML = Math.random();
+        document.getElementById("now").innerHTML = currentDate();
+      }
+
+      function currentDate(){
+        // Create a new Date object
+        const currentDate = new Date();
+
+        // Get the current date and time components
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth() + 1; // Months are 0-indexed, so we add 1
+        const day = currentDate.getDate();
+        const hours = currentDate.getHours();
+        const minutes = currentDate.getMinutes();
+        const seconds = currentDate.getSeconds();
+        // Create a formatted string for date and time
+        const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
+        return formattedDateTime;
+      }
+
+      function printed(){
+        document.getElementById("inputSelect").style.display = "none";
+        document.getElementById("button").style.display = "none";
+      }
+
+    </script>
+    <script type="text/javascript">
+    function numberToWords(number) {
+    const units = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+    const teens = ["", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+    const tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+
+    function convertTwoDigit(num) {
+      if (num < 10) {
+        return units[num];
+      } else if (num < 20) {
+        return teens[num - 10];
+      } else {
+        const tenDigit = Math.floor(num / 10);
+        const unitDigit = num % 10;
+        return tens[tenDigit] + (unitDigit !== 0 ? " " + units[unitDigit] : "");
+      }
+    }
+
+    function convertThreeDigit(num) {
+      const hundredDigit = Math.floor(num / 100);
+      const remainder = num % 100;
+      if (hundredDigit !== 0) {
+        if (remainder !== 0) {
+          return units[hundredDigit] + " hundred and " + convertTwoDigit(remainder);
+        } else {
+          return units[hundredDigit] + " hundred";
+        }
+      } else {
+        return convertTwoDigit(remainder);
+      }
+    }
+
+    if (number === 0) {
+      return "zero";
+    }
+
+    if (number < 0) {
+      return "minus " + numberToWords(-number);
+    }
+
+    const billion = Math.floor(number / 1000000000);
+    const million = Math.floor((number % 1000000000) / 1000000);
+    const thousand = Math.floor((number % 1000000) / 1000);
+    const remainder = number % 1000;
+
+    let result = "";
+
+    if (billion > 0) {
+      result += numberToWords(billion) + " billion ";
+    }
+
+    if (million > 0) {
+      result += numberToWords(million) + " million ";
+    }
+
+    if (thousand > 0) {
+      result += numberToWords(thousand) + " thousand ";
+    }
+
+    if (remainder > 0) {
+      result += convertThreeDigit(remainder);
+    }
+
+    return result.trim();
+    }
+
+    </script>
+</body>
+</html>
